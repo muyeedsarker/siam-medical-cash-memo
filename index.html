@@ -136,13 +136,46 @@ tbody td.desc input{text-align:left}
  .head{margin:0 0 14px}.add-row,.rm-row{display:none}.info-card{background:#fff}
  .table-wrap{border:1px solid #aaa}.btn,.toast{display:none}
 }
+
+/* Premium polish v3 */
+:root{--primary:#087f70;--primary2:#16b89a;--ink:#17324d;--soft:#f3faf8}
+body{padding:24px 12px 48px;background:linear-gradient(145deg,#eef8f6 0%,#f7fbff 52%,#eef5fb 100%)}
+.toolbar{max-width:980px;margin-bottom:18px;gap:10px}
+.btn{min-height:42px;border-radius:14px;padding:10px 17px;font-size:14px;display:inline-flex;align-items:center;justify-content:center;gap:5px}
+.memo{max-width:980px;border-radius:28px;padding:0 34px 30px;border:1px solid rgba(8,127,112,.14);box-shadow:0 24px 70px rgba(23,50,77,.14)}
+.head{margin:0 -34px 24px;padding:34px 14px 25px;background:linear-gradient(135deg,#f4fffc,#e4f7f2 55%,#edf8ff)}
+.head:before{height:6px}
+.shop-bn{font-size:36px;letter-spacing:-.4px}
+.shop-en{font-size:13px;letter-spacing:3px}
+.meta{font-size:14px;margin-top:8px}
+.cashmemo-tag{margin-top:15px;padding:7px 20px;font-size:15px}
+.section-title{font-size:16px;margin:15px 0 11px}
+.section-title span{width:34px;height:34px;border-radius:11px}
+.info-card{padding:15px;gap:12px;background:linear-gradient(180deg,#fbfefe,#f4f9f8)}
+.field input{min-height:42px;border-radius:11px}
+.table-wrap{border-radius:17px;box-shadow:0 8px 22px rgba(23,50,77,.05)}
+thead th{padding:12px 8px;font-size:13px}
+tbody td{padding:8px 7px}
+tbody td input{min-height:37px}
+.add-row{font-size:14px;padding:10px 16px;margin-top:12px}
+.summary{margin-top:18px}
+.totals{width:min(390px,100%);padding:12px 16px;border-radius:18px;background:linear-gradient(135deg,#f8fcfb,#eef8f6)}
+.totals td{font-size:14px;padding:7px 4px}
+.totals .grand td{font-size:19px}
+.amount-words{font-size:14px;margin-top:14px;padding:12px 15px}
+.foot{margin-top:40px;padding:0 8px}
+.sign{font-weight:600;color:#3f5265}
+.thanks{margin-top:24px;font-weight:600;color:#5c6f80}
+@media(max-width:700px){body{padding:10px 7px 32px}.memo{padding:0 13px 20px;border-radius:20px}.head{margin:0 -13px 16px;padding:25px 9px 19px}.shop-bn{font-size:27px!important}.toolbar{position:sticky;top:6px}.btn{min-height:40px;padding:9px 12px}.info-card{gap:9px}.section-title{margin-top:12px}}
+
+.memo-hint{margin:-5px 0 14px;padding:9px 12px;border-radius:10px;background:#f5faf9;color:#55706c;border:1px dashed #b9dcd5;font-size:12.5px;text-align:center}.memo-hint::first-letter{color:var(--primary)}
 </style>
 
 </head>
 <body>
 
 <div class="toolbar">
-  <button class="btn secondary" onclick="addRow()">＋ নতুন লাইন</button>
+  <button class="btn primary" onclick="addRow()">＋ নতুন লাইন</button>
   <button class="btn secondary" onclick="clearMemo()">↺ নতুন মেমো</button>
   <button class="btn secondary" onclick="showPreview()">👁️ প্রিভিউ</button>
   <button class="btn primary" onclick="window.print()">🖨️ প্রিন্ট / PDF</button>
@@ -153,7 +186,7 @@ tbody td.desc input{text-align:left}
     <div class="shop-bn">সিয়াম মেডিকেল হল-২</div>
     <div class="shop-en">Siam Medical Hall-2</div>
     <div class="meta">প্রোঃ মোঃ আব্দুল মুঈদ সরকার &nbsp;•&nbsp; মোবাইলঃ ০১৯৭৬৬৭২৭০৭</div>
-    <div class="cashmemo-tag">ক্যাশ মেমো</div>
+    <div class="cashmemo-tag">🧾 ক্যাশ মেমো</div>
   </div>
 
   <div class="section-title"><span>🧾</span> বিক্রয় তথ্য</div>
@@ -175,6 +208,7 @@ tbody td.desc input{text-align:left}
       <input type="text" placeholder="মোবাইল নম্বর">
     </div>
   </div>
+  <div class="memo-hint">✦ তথ্য লিখুন → ওষুধ যোগ করুন → সর্বমোট দেখুন → প্রিন্ট / PDF করুন</div>
 
   <div class="section-title"><span>💊</span> ওষুধ ও পণ্যের তালিকা</div>
   <div class="table-wrap"><table>
